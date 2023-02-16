@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset='utf-8'>
+    <title>Felipe Fadel</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='portfolioCss.css'>
+</head>
+
+<body>
+    <div class="EsqOne">
+        <!-- Divisão em duas grandes divs, no caso essa a div da esquerda -->
+        <div class="EsqEsc">
+            FELIPE<br>FADEL
+        </div>
+        <div class="EsqMore">
+            <div class="ImgEx">
+                <img class="EuImg" src="Images/Eu.jpg">                         <!-- Foto -->
+                <div class="ImgBorder">                                         <!-- borda da foto, precisar ser outra div pra aplicar animação de background -->
+                </div>
+            </div>
+
+            <div class="EsqBottom" >
+                <!-- Importar do Url as informções em css da fonte, pra ela fica certinha -->
+                <style>         
+                    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');      
+                </style>
+                <ul class="BotomEsq">
+                    <li class="Hove">HOME</li>                                  <!-- Os botões funcionam, mas não levam a link algum!!! -->
+                    <li class="Hove">PROJETOS</li>                              <!-- Não me recordo pq usei "hove" na class -->
+                    <li class="Hove">CONTATO</li>
+                </ul>
+            </div>    
+        </div>
+    </div>
+    <div class="DirOne">
+        <!-- Div da direita, scrolavel ao contrario da esquerda -->
+        <div class="Banner">
+            <div class="FundoBanner"></div>
+            <button class="Port" onclick="MudarStyle()">                        <!-- Ao clicar no botão mudar parcialmente o style da pagina -->
+                PORTFÓLIO
+            </button>
+        </div>
+        <div class="Images">                                                    <!-- Imagens de exemplo apenas, pra mostrar como fica a organização -->
+            <div class="colunaEsq">
+                <img src="Images/Abstract1.png" class="imagensColetanea">       
+                <img src="Images/Abstract4.png" class="imagensColetanea">
+            </div>
+            <div class="colunaCentro">
+                <img src="Images/Abstract2.png" class="imagensColetanea">
+                <img src="Images/Abstract5.png" class="imagensColetanea">
+            </div>
+            <div class="colunaDir">
+                <img src="Images/Abstract3.png" class="imagensColetanea">
+                <img src="Images/Abstract6.png" class="imagensColetanea">
+            </div>
+        </div>
+    </div> 
+    <script src="Script.js"></script>                                           <!-- Linkagem do arquivo com as funções em JavaScript -->
+</body>
+</html>
+
+
+<!-- Melhorias para o fututo: 
+- Melhorar a animação do evento ativado via Js, ta uma coisa seca
+- Ao passar o mouse pelas imagens da coletaneas, mostrar uma breve descrição do projeto que ela indexiona e ao clicar levar a uma pagina com mais info sobre ela
+- 
+-->

@@ -1,0 +1,267 @@
+body {
+    margin: 0px;
+    background-color: #0F0F0F;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {                               /*Mudar tamanho da scrollbar do lado direito*/                       
+    width: 10px;
+    position: fixed;
+}
+
+body::-webkit-scrollbar-track {                         /*Mudar cor da Scrollbar*/
+    background: rgb(29, 29, 29);
+}
+
+body::-webkit-scrollbar-thumb {                         /*Mudar caracteristicas da "bolinha" da scrollbar*/
+    background: #000000;
+    position: absolute;
+    border-radius: 4px;
+    background-size: 500%;
+}
+
+.EsqOne{                                                /*Div mais esquerda (a pagina foi divida em duas grandes div's)*/
+    width: 30vw;
+    height: 100vh;
+    position: fixed;
+}
+
+.EsqMore {                                              /*Borda da Div da esquerda*/
+    background-color: rgb(5, 5, 5);
+    float: left;
+    width: 70%;
+    height: 100vh;
+    border-right: solid;
+    border-image: linear-gradient(                      /*Gradientezinho, (No futuro tentar aplicar animação a ele)*/
+        to top,
+        #007adf,
+        rgba(0,0,0,0)
+    ) 1 100%;
+}
+
+.EsqEsc{                                                /*"FELIPE FADEL", definições deste titulo*/
+    margin-top: 3vh;
+    width: 70%;
+    height: 10rem;
+    font-size: 11vh;
+    font-family: fantasy;
+    position: absolute;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: -webkit-linear-gradient(45deg, #007adf, #00ecbc, #007adf);
+    background-size: 350%;                              /*MUITO IMPORTANTE, Aumentar o background para ele poder deslizar e gerar o efeito da animação*/
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: AnimationName 20s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {                      /*Movimentação do gradiente aplicado como cor ou backgroun nos objetos*/
+    0%{background-position:0% 50%}                      /*Movimenta da posição 0 até a 50, metade*/
+    50%{background-position:100% 51%}                   /*Movimenta da metade para frente*/
+    100%{background-position:0% 50%}                    /*Movinta do final para o inicio novamente*/
+}                                                       /*Cada etapa tem velocidade difente, tendo em vista a duração especificada a animação como um todo*/
+
+.ImgEx {                                                /*Definições da DIv que levara a imagem e a borda*/
+    width: 100%;
+    height: 15vh;
+    margin-top: 85%;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.EuImg {                                                /*A imagem em si, no caso a minha foto*/
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+    position: absolute;
+    background-color: rgb(5, 5, 5);
+    border-style: solid;
+    border-width: 200%;
+}
+
+.ImgBorder {                                            /*Borda da imagem, aplicada a animação*/
+    width: 172px;
+    height: 172px;
+    background: -webkit-linear-gradient(45deg, #007adf, #00ecbc, #007adf);
+    border-radius: 100px;
+    background-size: 350%;
+    -webkit-animation: AnimationName 20s ease infinite;    
+}
+
+.EsqBottom {                                            /*Div que recebera a lista de links/botões*/
+    width: 100%;
+    height: 25%;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+}
+
+.BotomEsq {                                             /*Lista de colunas com 3 links, HOME, PROJETOS, CONTATO*/
+    font-size: 19px;                                    /*Obs: não levam a lugar algum ainda*/
+    font-family: 'Raleway', sans-serif;
+    list-style-type:none;
+    background: -webkit-linear-gradient(45deg, #00ecbc,#007adf);
+    background-size: 350%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: AnimationName 20s ease infinite;
+    position: static;
+    margin-right: 30%;
+}
+
+li{
+    padding-top: 30%;
+}
+
+.Hove:hover {                                           /*Não lembro pq usei esse nome na classe, mas ao passar o mouse ativa a animação*/
+    background: -webkit-linear-gradient(45deg, #00ffcc,#007adf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.DirOne{                                                /*Principal Div a Direita, faz parte da divisão primaria da pagina*/
+    float: right;
+    width: 80vw;
+    height: 100vh;
+}
+
+.Banner {                                               /*Div que vai receber o banner*/
+    position: relative;
+    justify-content: center;
+    top: 5%;
+    width: 70%;
+    height: 70vh;
+    margin: 0 auto;
+    background-color: transparent;
+    flex-direction: column;
+}
+
+.BannerEvento{                                          /*Essa classe não está especificada no arquivo HTML, mas é adicionada via Js no resultado final*/
+    position: relative;                                 /*Atraves da função que especifica essa classe o tamanho geral do banner é reduzido*/
+    justify-content: center;
+    top: 5%;
+    width: 70%;
+    height: 30vh;
+    margin: 0 auto;
+    background-color: transparent;
+    flex-direction: column;
+}
+
+.FundoBanner{                                           /*Por padrão animação de gradiente*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(45deg, #007adf, #00ecbc, #007adf);
+    background-size: 350%;
+    -webkit-animation: AnimationName 20s ease infinite;   
+} 
+
+.FundoBannerEvento{                                         /*Ao ativar o evento atraves do clique, o fundo perde o efeito animado e se torna trasparente*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.Port {                                                     /*Referece a escrita "Portfolio"*/
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    color: rgb(255, 255, 255);
+    font-size: 8rem;
+    text-align: center;
+    font-family: fantasy;
+    border: none;
+    background-color: transparent;
+}
+
+.PortEvento{                                                /*Ao ativar o evento a animação é dada a escrita*/
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    font-size: 8rem;
+    text-align: center;
+    font-family: fantasy;
+    border: none;
+    background: -webkit-linear-gradient(45deg, #007adf, #00ecbc, #007adf);
+    background-size: 350%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: AnimationName 20s ease infinite;
+}
+
+.Port:hover {                                               /*Um efeito Hover para as diferentes classes de Port é nescessaria*/
+    position: absolute;                                     /*Esse muda a cor da escrita para preto*/
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    color: #0F0F0F;
+    font-size: 8rem;
+    text-align: center;
+    font-family: fantasy;
+    border: none;
+    background-color: transparent;
+}
+
+.PortEvento:hover {                                         /*Esse muda a cor da escrita para branco*/
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    font-size: 8rem;
+    text-align: center;
+    font-family: fantasy;
+    border: none;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Images{                                                    /*Div que vai conter a coletanea de imagens*/
+    position: relative;
+    width: 70%;
+    height: 70vh;
+    background-color: white;
+    left: 15%;
+    top: 15%;
+}
+
+.colunaEsq{                                                /*Divisão da div maior em 3, na vertical*/
+    position: absolute;                                     /*Essa é coluna da esquerda*/
+    left: 0%;
+    width: 33.3%;
+    height: 100%;
+    background-color: #000000;
+    text-align: center;
+}
+
+.colunaCentro{                                              /*Essa é coluna do centro*/
+    position: absolute;
+    left: 33.33%;
+    width: 33.33%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.colunaDir{                                                 /*Essa é coluna da direita*/
+    position: absolute;
+    right: 0%;
+    width: 33.3%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.imagensColetanea{                                          /*Classe geral que define o quanto a imagem ocupara*/
+    width: 99%;
+    position: relative;
+}
